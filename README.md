@@ -215,7 +215,7 @@ testovoe/
 ├── users/               # Приложение пользователей
 │   ├── models.py        # CustomUser, Session
 │   ├── views.py         # Auth views
-│   ├── middleware.py    # JWT middleware
+│   ├── authentication.py # JWT authentication class
 │   └── serializers.py
 ├── access/              # Приложение управления доступом
 │   ├── models.py        # Role, BusinessElement, AccessRoleRule
