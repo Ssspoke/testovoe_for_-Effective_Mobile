@@ -185,24 +185,26 @@ pip install -r requirements.txt
 
 2. Примените миграции:
 ```bash
-python manage.py makemigrations
 python manage.py migrate
 ```
 
-3. Создайте суперпользователя:
+3. Заполните тестовыми данными (роли, правила, пользователи):
 ```bash
-python manage.py createsuperuser
+python manage.py seed_db
 ```
 
-4. Заполните тестовыми данными (опционально):
-```bash
-python manage.py loaddata fixtures/initial_data.json
-```
-
-5. Запустите сервер:
+4. Запустите сервер:
 ```bash
 python manage.py runserver
 ```
+
+5. Откройте `http://127.0.0.1:8000/` — там документация API и тестовые учетные данные.
+
+> **Тестовые пользователи после `seed_db`:**
+> - Admin: `admin@test.com` / `admin123`
+> - Manager: `manager@test.com` / `manager123`
+> - User: `user@test.com` / `user123`
+> - Guest: `guest@test.com` / `guest123`
 
 ## Структура проекта
 
